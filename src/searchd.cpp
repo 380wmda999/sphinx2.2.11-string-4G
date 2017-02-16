@@ -6249,7 +6249,7 @@ bool SearchReplyParser_t::ParseReply ( MemInputBuffer_c & tReq, AgentConn_t & tA
 							tMatch.SetAttr ( tAttr.m_tLocator, 0 );
 						} else
 						{
-							SphOffset_t iOff = m_dStringsStorage.GetLength();
+							int64_t iOff = m_dStringsStorage.GetLength();
 							tMatch.SetAttr ( tAttr.m_tLocator, iOff );
 
 							m_dStringsStorage.Resize ( iOff+4+iLen );
@@ -6278,7 +6278,7 @@ bool SearchReplyParser_t::ParseReply ( MemInputBuffer_c & tReq, AgentConn_t & tA
 							tMatch.SetAttr ( tAttr.m_tLocator, 0 );
 						} else
 						{
-							SphOffset_t iOff = m_dStringsStorage.GetLength();
+							int64_t iOff = m_dStringsStorage.GetLength();
 							//int64_t iTypeOffset = ( ( (int64_t)iOff ) | ( ( (int64_t)eJson )<<32 ) );
 							//tMatch.SetAttr ( tAttr.m_tLocator, iTypeOffset );
 							tMatch.SetAttr(tAttr.m_tLocator, iOff);

@@ -945,7 +945,7 @@ public:
 	}
 
 	/// resize
-	void Resize ( SphOffset_t iNewLength )
+	void Resize(int64_t iNewLength)
 	{
 		assert ( iNewLength>=0 );
 		if ( iNewLength>m_iLength )
@@ -962,19 +962,19 @@ public:
 	}
 
 	/// query current length, in elements
-	inline SphOffset_t GetLength() const
+	inline int64_t GetLength() const
 	{
 		return m_iLength;
 	}
 
 	/// query current reserved size, in elements
-	inline SphOffset_t GetLimit() const
+	inline int64_t GetLimit() const
 	{
 		return m_iLimit;
 	}
 
 	/// query currently used RAM, in bytes
-	inline SphOffset_t GetSizeBytes() const
+	inline int64_t GetSizeBytes() const
 	{
 		return m_iLimit*sizeof(T);
 	}
@@ -1118,8 +1118,8 @@ public:
 	}
 
 protected:
-	SphOffset_t		m_iLength;		///< entries actually used
-	SphOffset_t		m_iLimit;		///< entries allocated
+	int64_t		m_iLength;		///< entries actually used
+	int64_t		m_iLimit;		///< entries allocated
 	T *		m_pData;		///< entries
 };
 
