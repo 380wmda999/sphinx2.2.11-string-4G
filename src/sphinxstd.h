@@ -948,7 +948,7 @@ public:
 	void Resize(int64_t iNewLength)
 	{
 		assert ( iNewLength>=0 );
-		if ((unsigned int64_t)iNewLength>(unsigned int64_t)m_iLength)
+		if ((unsigned int64_t)(iNewLength)>(unsigned int64_t)m_iLength)
 			Reserve ( iNewLength );
 		m_iLength = iNewLength;
 	}

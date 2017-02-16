@@ -558,8 +558,8 @@ template < typename T, typename COMP > class CSphQueue
 {
 protected:
 	T *		m_pData;
-	int		m_iUsed;
-	int		m_iSize;
+	int64_t		m_iUsed;
+	int64_t		m_iSize;
 
 public:
 	/// ctor
@@ -646,7 +646,7 @@ public:
 	}
 
 	/// get entries count
-	inline int GetLength () const
+	inline int64_t GetLength() const
 	{
 		return m_iUsed;
 	}
