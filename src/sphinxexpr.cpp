@@ -5867,7 +5867,7 @@ int ExprParser_t::AddNodeFunc ( int iFunc, int iFirst, int iSecond, int iThird, 
 	{
 		if ( dRetTypes.GetLength()>3 )
 		{
-			m_sParserError.SetSprintf ( "%s() called with %d args, at most 3 args expected", sFuncName, dRetTypes.GetLength() );
+			m_sParserError.SetSprintf("%s() called with %d args, at most 3 args expected", sFuncName, (int)dRetTypes.GetLength());
 			return -1;
 		}
 
@@ -5889,7 +5889,7 @@ int ExprParser_t::AddNodeFunc ( int iFunc, int iFirst, int iSecond, int iThird, 
 	{
 		if ( dRetTypes.GetLength()>5 )
 		{
-			m_sParserError.SetSprintf ( "%s() called with %d args, at most 5 args expected", sFuncName, dRetTypes.GetLength() );
+			m_sParserError.SetSprintf("%s() called with %d args, at most 5 args expected", sFuncName, (int)dRetTypes.GetLength());
 			return -1;
 		}
 
